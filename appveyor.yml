@@ -12,10 +12,10 @@ before_build:
   # Display .NET Core version
   - cmd: dotnet --version
   # Display minimal restore text
-  - cmd: dotnet restore ./FiftyStatesTracker/FiftyStatesTracker.csproj --verbosity m
+  - cmd: dotnet restore ./FiftyStatesTracker/FiftyStatesTracker/FiftyStatesTracker.csproj --verbosity m
 build_script:
   # output will be in ./src/bin/debug/netcoreapp1.1/publish
-  - cmd: dotnet publish ./FiftyStatesTracker/FiftyStatesTracker.csproj
+  - cmd: dotnet publish ./FiftyStatesTracker/FiftyStatesTracker/FiftyStatesTracker.csproj
 after_build:
   # For once the build has completed
 artifacts:
