@@ -15,6 +15,7 @@ before_build:
   - cmd: dotnet restore ./FiftyStatesTracker/FiftyStatesTracker/FiftyStatesTracker.csproj --verbosity m
 build_script:
   # output will be in ./src/bin/debug/netcoreapp1.1/publish
+  - cmd: npm install
   - cmd: dotnet publish ./FiftyStatesTracker/FiftyStatesTracker/FiftyStatesTracker.csproj
 after_build:
   # For once the build has completed
